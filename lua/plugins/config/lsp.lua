@@ -6,3 +6,7 @@ require("neodev").setup{}
 lspconfig.lua_ls.setup{
     capabilities = capabilities,
 }
+
+lspconfig.clangd.setup{}
+
+lspconfig.cmake.setup{}

@@ -6,7 +6,6 @@ local dashboard = require("alpha.themes.dashboard")
 
 local date = os.date("*t")
 
-
 -- Format example: Monday, January 20
 local get_todays_date = function()
     local result = {}
