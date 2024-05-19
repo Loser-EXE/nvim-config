@@ -53,7 +53,12 @@ return {
         end
     },
     {"nvim-telescope/telescope.nvim",
-        dependencies = { 'nvim-lua/plenary.nvim' }
-    }
+        dependencies = {'nvim-lua/plenary.nvim'}
+    },
+    {'goolord/alpha-nvim',
+        config = function ()
+            require("plugins/config/dashboard")
+        end
+    };
 }
 

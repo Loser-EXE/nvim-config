@@ -14,6 +14,12 @@ end
 
 vim.opt.rtp:prepend(path)
 
+local ascii = require("AsciiArt")
+
+for index, value in ipairs(ascii.weekdays) do
+    ascii.weekdays[index] = ascii.combine(value, ascii.comma)
+end
+
 require("lazy").setup("plugins")
 require("core/options")
 require("core/mappings")
