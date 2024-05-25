@@ -22,7 +22,8 @@ return {
         end
     },
     {"L3MON4D3/LuaSnip",
-        build = "make install_jsregexp"
+        build = "make install_jsregexp",
+        dependencies = {"rafamadriz/friendly-snippets"}
     },
     {"hrsh7th/cmp-buffer"},
     {"saadparwaiz1/cmp_luasnip"},
@@ -49,6 +50,14 @@ return {
         config = function ()
             require("plugins/config/dashboard")
         end
-    };
+    },
+    {"Shatur/neovim-tasks"},
+    {"rafamadriz/friendly-snippets"},
+    {"mfussenegger/nvim-jdtls",
+        event = "BufEnter *.java",
+        config = function()
+           require("plugins/config/jdtls")
+        end
+    }
 }
 

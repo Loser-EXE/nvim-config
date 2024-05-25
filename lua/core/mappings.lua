@@ -13,6 +13,11 @@ map('n', '<Leader>fg', '<CMD>Telescope live_grep<CR>', {silent=true})
 
 -- Terminal 
 map("n", "<C-t>", ":hor bel split<CR>:res -5<CR>:terminal<CR>i", {silent=true})
-
 map("t", "<Esc>", "<C-\\><C-n>", {})
 map("t", "<C-t>", "<C-\\><C-n>:q<CR>", {})
+
+-- CMake build tools
+map("n", "<C-c>", ":Task start cmake configure<CR><ESC>", {silent=true})
+map("n", "<C-b>", ":Task start cmake build<CR><ESC>", {silent=true})
+
+map("n", "<Leader>nhl", ":nohlsearch<CR>", {silent=true})

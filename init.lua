@@ -20,6 +20,10 @@ for index, value in ipairs(ascii.weekdays) do
     ascii.weekdays[index] = ascii.combine(value, ascii.comma)
 end
 
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+    install = {
+        colorscheme = {"gruvbox", "habamax"}
+    }
+})
 require("core/options")
 require("core/mappings")
