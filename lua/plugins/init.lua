@@ -1,4 +1,10 @@
 return {
+    {"mfussenegger/nvim-jdtls",
+        event = "BufEnter *.java",
+        config = function()
+           require("plugins/config/jdtls")
+        end
+    },
     {"ellisonleao/gruvbox.nvim",
         priority = 1000,
         lazy = false,
@@ -16,7 +22,6 @@ return {
     {"MunifTanjim/nui.nvim"},
     {"nvim-neo-tree/neo-tree.nvim"},
     {"nvim-treesitter/nvim-treesitter",
-        event = "BufEnter *.*",
         config = function ()
             require("plugins.config.treesitter")
         end
@@ -44,7 +49,10 @@ return {
         end
     },
     {"nvim-telescope/telescope.nvim",
-        cmd = "Telescope"
+        cmd = "Telescope",
+        config = function ()
+            require("plugins/config/telescope")
+        end
     },
     {'goolord/alpha-nvim',
         config = function ()
@@ -53,11 +61,5 @@ return {
     },
     {"Shatur/neovim-tasks"},
     {"rafamadriz/friendly-snippets"},
-    {"mfussenegger/nvim-jdtls",
-        event = "BufEnter *.java",
-        config = function()
-           require("plugins/config/jdtls")
-        end
-    }
 }
 
